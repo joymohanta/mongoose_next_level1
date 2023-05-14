@@ -59,9 +59,13 @@ const userSchema = new Schema<IUser, UserModel, IUserMethods>({
   },
 });
 
+// Finding one or more setting specific
 userSchema.static("getAdminUsers", async function getAdminUsers() {
   const admins = await this.find({ role: "admin" });
+  // const admins = await this.find({ "name.firstName": "rijvi" });
+  return admins;
 });
+// up only 3 code
 
 userSchema.method("fullName", function fullName() {
   return this.name.firstName + " " + this.name.lastName;

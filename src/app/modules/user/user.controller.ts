@@ -49,6 +49,7 @@ export const getUserById = async (
   });
 };
 
+// Finding one or more setting specific
 export const getAdminUsers = async (
   req: Request,
   res: Response,

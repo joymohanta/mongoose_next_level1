@@ -23,7 +23,7 @@ export interface IUserMethods {
   fullName(): string;
 }
 
-// Statics
+// Statics // Finding one or more setting specific
 export interface UserModel extends Model<IUser, {}, IUserMethods> {
   getAdminUsers(): Promise<HydratedDocument<IUser, IUserMethods>>;
 }
